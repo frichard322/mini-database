@@ -1,0 +1,27 @@
+plugins {
+    id "java"
+    id "application"
+    id "maven-publish"
+}
+
+repositories{
+    mavenCentral()
+}
+
+dependencies{
+    // https://mvnrepository.com/artifact/org.mongodb/mongodb-driver-sync
+    implementation group: 'org.mongodb', name: 'mongodb-driver-sync', version: '4.2.2'
+    // https://mvnrepository.com/artifact/org.mongodb/bson
+    implementation group: 'org.mongodb', name: 'bson', version: '4.2.2'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
+}
+
+application {
+    getMainClass().set("edu.ubbcluj.ab2.minidb")
+}
+
+group = "edu.ubbcluj.ab2"
+version = "1.0-SNAPSHOT"
